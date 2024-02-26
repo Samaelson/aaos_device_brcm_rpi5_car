@@ -1,5 +1,5 @@
 PRODUCT_PACKAGE_OVERLAYS += \
-    device/brcm/rpi5-car/overlay \
+    device/brcm/rpi-car/overlay \
     device/generic/car/common/overlay
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -107,6 +107,6 @@ PRODUCT_COPY_FILES += \
 
 #overwrite boot animation
 PRODUCT_COPY_FILES += \
-    device/brcm/rpi4-car/bootanimation-car.zip:system/media/bootanimation.zip
+    device/brcm/rpi-car/bootanimation-car.zip:system/media/bootanimation.zip
 
 $(call inherit-product, packages/services/Car/car_product/build/car.mk)
