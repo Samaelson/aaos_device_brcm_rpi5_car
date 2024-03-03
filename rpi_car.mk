@@ -12,10 +12,8 @@ ENABLE_MOCK_EVSHAL ?= true
 ENABLE_CAREVSSERVICE_SAMPLE ?= true
 ENABLE_SAMPLE_EVS_APP ?= true
 ENABLE_CARTELEMETRY_SERVICE ?= true
-
 CUSTOMIZE_EVS_SERVICE_PARAMETER := true
-PRODUCT_PACKAGES += android.hardware.automotive.evs@1.1-service \
-    android.frameworks.automotive.display@1.0-service
+
 PRODUCT_COPY_FILES += \
     device/google/cuttlefish/shared/auto/evs/init.evs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.evs.rc
 BOARD_SEPOLICY_DIRS += device/google/cuttlefish/shared/auto/sepolicy/evs
@@ -26,6 +24,12 @@ PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@V1-emulator-service \
     android.hardware.broadcastradio@2.0-service \
     android.hardware.automotive.audiocontrol@2.0-service \
+    android.frameworks.automotive.display@1.0-service \
+    android.hardware.automotive.evs@1.1 \
+    android.hardware.automotive.evs-V1-ndk \
+    android.hardware.automotive.evs@1.1-service \
+    android.hardware.automotive.evs-aidl-default-service \
+    evs_app \
     
   
 # Runtime Resource Overlay for Connectivity
